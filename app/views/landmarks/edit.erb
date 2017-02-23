@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Year Completed</th>
+  </tr>
+  <tr>
+    <td><%= @landmark.name %></td>
+    <td><%= @landmark.year_completed %></td>
+  </tr>
+<table>
+  <h3>Edit:</h3>
+<form method="POST" action="/landmarks/<%=@landmark.id%>">
+    <p><input type="text" id = "name" value = "<%=@landmark.name%>" name="landmark[name]"></p>
+    <p><input type="number" id = "year_completed" value = "<%=@landmark.year_completed%>" name="landmark[year_completed]"></p>
+    <p><input type="submit" id = "Edit Landmark" value = "Edit Landmark"></p>
+  </form>
